@@ -1,0 +1,55 @@
+Answer Q1 to Q5 in any text file. Upload the Android project includes Q6 and the text file ( Q1
+to Q5 ) to your GitHub and send a direct message to us that you have completed.
+
+
+1. What is Encapsulation ? Try to list out the benefits of Encapsulation.
+
+封裝能夠限制其他類別或程式碼使用或更改特性及方法，如此可以增加該類別的安全性，避免於其他地方錯誤使用或更改。
+
+2. Try to explain what is enum and why we use them.
+
+可在其中宣告多個物件，並賦予該物件數值及方法。快速列舉和定義多個物件（但都是常數／常量），
+可以在main中容易取得這些物件的屬性和函式。
+另外，enum能夠確保變數的值只能被設成所指定的資料型態，不會自動轉型其他型態以減少程式bug出現。
+
+3. How to use enum in Kotlin? Attach a sample code that use enum in Kotlin.
+
+
+在class前面加上"enum" :
+
+enum class GameMode{
+    NOVICE,
+    NORMAL,
+    HARD,
+    CRAZY
+}
+
+fun main() {
+    val gamemode = GameMode.NOVICE
+    println(gamemode)
+}
+
+//Result︰NOVICE
+
+
+
+4. What are the differences between LinearLayout and RelativeLayout ? Try to explain in
+details.
+
+
+LinearLayout裡面所有元件都是線性排列，像是左右的水平排列或上下的垂直排列。
+
+RelativeLayout在建立之時，其版面就會是Parent view，在這版面中這些元件屬於子元件Child view，
+因此所有子元件的排列位置設定是"相對"於Parent View或其他子Child View兄弟元件來決定的。
+例如元件在整個Layout裡置中，或是元件在另一個元件的"相對"上、下、等等。
+
+
+5. Try to explain the benefits of ConstraintLayout . Why you should use it?
+
+ConstraintLayout有類似RelativeLayout中能夠使
+元件的margin對齊、指定的間距，還有如
+LinearLayout讓元件水平或垂直排列的功能。
+另外的好處是在design tab中較直覺，不用很多LinearLayout與RelativeLayout的構造設計layout，
+因此層級較少，載入的速度也會較快。
+
+
